@@ -234,11 +234,11 @@
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kJC-tw-PTY">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="458"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="imager_02" translatesAutoresizingMaskIntoConstraints="NO" id="Fhm-ut-9ro" userLabel="imager_02">
-                                        <rect key="frame" x="320" y="0.0" width="320" height="458"/>
-                                    </imageView>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="imager_01" translatesAutoresizingMaskIntoConstraints="NO" id="BW1-t1-9ae">
                                         <rect key="frame" x="0.0" y="0.0" width="320" height="458"/>
+                                    </imageView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="imager_02" translatesAutoresizingMaskIntoConstraints="NO" id="Fhm-ut-9ro" userLabel="imager_02">
+                                        <rect key="frame" x="320" y="0.0" width="320" height="458"/>
                                     </imageView>
                                 </subviews>
                                 <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
