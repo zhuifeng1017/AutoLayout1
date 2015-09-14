@@ -175,8 +175,8 @@
                                         </state>
                                         <state key="disabled" image=" log in_button_go_ gray.png"/>
                                     </button>
-                                    <pageControl opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="2" translatesAutoresizingMaskIntoConstraints="NO" id="OeV-8a-RNR">
-                                        <rect key="frame" x="165" y="-2" width="82" height="37"/>
+                                    <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="2" translatesAutoresizingMaskIntoConstraints="NO" id="OeV-8a-RNR">
+                                        <rect key="frame" x="119" y="-2" width="82" height="37"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="82" id="0GJ-bx-RpO"/>
                                             <constraint firstAttribute="height" constant="37" id="GPy-3B-cVW"/>
@@ -196,8 +196,8 @@
                                     <constraint firstAttribute="height" constant="34" id="dhj-NN-HfX"/>
                                 </constraints>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="15g-k6-tm3">
-                                <rect key="frame" x="197" y="500" width="161.5" height="43"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="15g-k6-tm3">
+                                <rect key="frame" x="170" y="500" width="134" height="43"/>
                                 <color key="backgroundColor" red="0.98039215690000003" green="0.20000000000000001" blue="0.1960784314" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="43" id="Aej-SL-p4K"/>
@@ -211,7 +211,7 @@
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0zS-5a-1Ai">
-                                <rect key="frame" x="16" y="500" width="134.5" height="43"/>
+                                <rect key="frame" x="16" y="500" width="134" height="43"/>
                                 <color key="backgroundColor" red="0.14117647059999999" green="0.71372549019999998" blue="0.32156862749999998" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="43" id="NrF-7j-HM5"/>
