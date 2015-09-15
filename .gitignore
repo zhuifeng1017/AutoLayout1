@@ -1,0 +1,15 @@
+
+*.xcbkptlist
+*.o
+.DS_Store
+xcuserdata
+xcuserstate/*
+*.xcuserstate
+*.xcuserstate/*
+xcshareddata
+Pods
+
+
+AutoLayout1.xcodeproj/project.xcworkspace/xcuserdata/ZhaoMin.xcuserdatad/UserInterfaceState.xcuserstate
+
+Podfile.lock
