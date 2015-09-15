@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		6D38FE281BA6F7340081EB3F /* WelComeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D38FE271BA6F7340081EB3F /* WelComeViewController.m */; };
+		6D4551A21BA7D5DC0099FED6 /* MyTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D4551A11BA7D5DC0099FED6 /* MyTableViewController.m */; };
+		6D9F22B01BA7D0360064E6F1 /* LableMultiLineViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D9F22AF1BA7D0360064E6F1 /* LableMultiLineViewController.m */; };
 		6DF6ED401BA66D59007258E9 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DF6ED3F1BA66D59007258E9 /* main.m */; };
 		6DF6ED431BA66D59007258E9 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DF6ED421BA66D59007258E9 /* AppDelegate.m */; };
 		6DF6ED461BA66D59007258E9 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DF6ED451BA66D59007258E9 /* ViewController.m */; };
@@ -32,6 +34,10 @@
 /* Begin PBXFileReference section */
 		6D38FE261BA6F7340081EB3F /* WelComeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WelComeViewController.h; sourceTree = "<group>"; };
 		6D38FE271BA6F7340081EB3F /* WelComeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WelComeViewController.m; sourceTree = "<group>"; };
+		6D4551A01BA7D5DC0099FED6 /* MyTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyTableViewController.h; sourceTree = "<group>"; };
+		6D4551A11BA7D5DC0099FED6 /* MyTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyTableViewController.m; sourceTree = "<group>"; };
+		6D9F22AE1BA7D0360064E6F1 /* LableMultiLineViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LableMultiLineViewController.h; sourceTree = "<group>"; };
+		6D9F22AF1BA7D0360064E6F1 /* LableMultiLineViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LableMultiLineViewController.m; sourceTree = "<group>"; };
 		6DF6ED3A1BA66D59007258E9 /* AutoLayout1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AutoLayout1.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6DF6ED3E1BA66D59007258E9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6DF6ED3F1BA66D59007258E9 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -103,6 +109,10 @@
 				6D38FE261BA6F7340081EB3F /* WelComeViewController.h */,
 				6D38FE271BA6F7340081EB3F /* WelComeViewController.m */,
 				6DF6ED471BA66D59007258E9 /* Main.storyboard */,
+				6D4551A01BA7D5DC0099FED6 /* MyTableViewController.h */,
+				6D4551A11BA7D5DC0099FED6 /* MyTableViewController.m */,
+				6D9F22AE1BA7D0360064E6F1 /* LableMultiLineViewController.h */,
+				6D9F22AF1BA7D0360064E6F1 /* LableMultiLineViewController.m */,
 				6DF6ED4A1BA66D59007258E9 /* Images.xcassets */,
 				6DF6ED4C1BA66D59007258E9 /* LaunchScreen.xib */,
 				6DF6ED3D1BA66D59007258E9 /* Supporting Files */,
@@ -292,7 +302,9 @@
 				6DF6ED651BA68F82007258E9 /* CodeLayoutViewController.m in Sources */,
 				6DF6ED431BA66D59007258E9 /* AppDelegate.m in Sources */,
 				6DF6ED401BA66D59007258E9 /* main.m in Sources */,
+				6D4551A21BA7D5DC0099FED6 /* MyTableViewController.m in Sources */,
 				6D38FE281BA6F7340081EB3F /* WelComeViewController.m in Sources */,
+				6D9F22B01BA7D0360064E6F1 /* LableMultiLineViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

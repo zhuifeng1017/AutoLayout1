@@ -111,6 +111,11 @@ const BOOL USE_Masonry = YES;
     }
 }
 
+//+ (BOOL)requiresConstraintBasedLayout
+//{
+//    return YES;
+//}
+
 - (void)viewWillLayoutSubviews {
 }
 
