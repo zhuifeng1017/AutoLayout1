@@ -17,9 +17,9 @@
 #import "Masonry.h"
 
 const BOOL USE_CODE = YES;
-const BOOL USE_VFS = NO;
+const BOOL USE_VFS = YES;
 const BOOL USE_NSCONS = NO; // 使用NSLayoutConstraint一个个写，泪奔的感觉
-const BOOL USE_Masonry = YES;
+const BOOL USE_Masonry = NO;
 
 @interface WelComeViewController ()
 
@@ -29,8 +29,14 @@ const BOOL USE_Masonry = YES;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // 在这里设置是没有用的，需要在viewDidLayoutSubviews设置
-    //  [_scrollView setContentSize:CGSizeMake(_scrollView.frame.size.width*2, _scrollView.frame.size.height)];
+// 在这里设置是没有用的，需要在viewDidLayoutSubviews设置
+//  [_scrollView setContentSize:CGSizeMake(_scrollView.frame.size.width*2, _scrollView.frame.size.height)];
+
+#ifdef __IPHONE_8_0
+//    UIEdgeInsets insets = self.view.layoutMargins;
+//    NSLog(@"UIEdgeInsets: %f, %f, %f, %f", insets.top, insets.left, insets.bottom, insets.right);
+#endif
+
     if (USE_CODE) {
         [_scrollView.subviews makeObjectsPerformSelector:@selector(removeFromSuperview)];
 
@@ -47,6 +53,7 @@ const BOOL USE_Masonry = YES;
         NSDictionary *viewDict1 = NSDictionaryOfVariableBindings(imageView1, imageView2, _scrollView);
 
         if (USE_VFS) {
+
             // imageView1与父视图上下间距0，高度相等
             NSArray *vConstrt1 = [NSLayoutConstraint constraintsWithVisualFormat:@"V:|[imageView1(==_scrollView)]|" options:0 metrics:nil views:viewDict1];
             [self.view addConstraints:vConstrt1];
