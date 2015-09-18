@@ -23,8 +23,8 @@
 
     // Make sure the contentView does a layout pass here so that its subviews have their frames set, which we
     // need to use to set the preferredMaxLayoutWidth below.
-    //    [self.contentView setNeedsLayout];
-    //    [self.contentView layoutIfNeeded];
+    [self.contentView setNeedsLayout];
+    [self.contentView layoutIfNeeded];
 
     // Set the preferredMaxLayoutWidth of the mutli-line bodyLabel based on the evaluated width of the label's frame,
     // as this will allow the text to wrap correctly, and as a result allow the label to take on the correct height.
@@ -39,6 +39,7 @@
 @interface AutolayoutTableViewController ()
 @property (strong, nonatomic) AutolayoutCell *calcCell;
 @property (strong, nonatomic) NSMutableArray *contentTexts;
+@property (strong, nonatomic) NSMutableArray *imagePaths;
 @end
 
 @implementation AutolayoutTableViewController
@@ -48,13 +49,17 @@
     // Do any additional setup after loading the view.
     int count = 100;
     _contentTexts = [NSMutableArray arrayWithCapacity:count];
+    _imagePaths = [NSMutableArray arrayWithCapacity:count];
     for (int i = 0; i < count; i++) {
         if (i % 3 == 0) {
             [_contentTexts addObject:@"[Masonry](https://github.com/Masonry/Masonry)的核心是MASConstraintMaker, 其本质是MASConstraint工厂. 而MASConstraint作为builder负责创建并添加NSLayoutConstraint. MASConstraint使用了Chaining Pattern"];
+            [_imagePaths addObject:@""];
         } else if (i % 2 == 0) {
             [_contentTexts addObject:@"The ultimate API for iOS & OS X Auto Layout"];
+            [_imagePaths addObject:@""];
         } else {
             [_contentTexts addObject:@"WWDC总结：开发者需要知道的iOS 9 SDK新特性|如何搞定Autolayout，远离自动布局带给你的烦恼- 简书"];
+            [_imagePaths addObject:@"home_pic"];
         }
     }
 }
@@ -72,6 +77,15 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     AutolayoutCell *cell = (AutolayoutCell *)[tableView dequeueReusableCellWithIdentifier:@"cell1" forIndexPath:indexPath];
     cell.contentLabel.text = _contentTexts[indexPath.row];
+    NSString *imagePath = _imagePaths[indexPath.row];
+    cell.contentImageView.image = [UIImage imageNamed:imagePath];
+#if 1
+    if ([imagePath length] == 0) {
+        cell.imgHeightCons.constant = 0;
+    } else {
+        cell.imgHeightCons.constant = 80;
+    }
+#endif
     [cell setNeedsUpdateConstraints];
     [cell updateConstraintsIfNeeded];
     return cell;
@@ -83,6 +97,12 @@
     }
 
     _calcCell.contentLabel.text = _contentTexts[indexPath.row];
+    NSString *imagePath = _imagePaths[indexPath.row];
+    if ([imagePath length] == 0) {
+        _calcCell.imgHeightCons.constant = 0;
+    } else {
+        _calcCell.imgHeightCons.constant = 80;
+    }
     [_calcCell setNeedsUpdateConstraints];
     [_calcCell updateConstraintsIfNeeded];
 
@@ -91,6 +111,7 @@
     [_calcCell layoutIfNeeded];
 
     CGFloat height = [_calcCell.contentView systemLayoutSizeFittingSize:UILayoutFittingCompressedSize].height;
+
     // Add an extra point to the height to account for the cell separator, which is added between the bottom
     // of the cell's contentView and the bottom of the table view cell.
     height += 1;

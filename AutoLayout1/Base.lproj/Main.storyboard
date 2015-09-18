@@ -104,6 +104,12 @@
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="是笔者在项目开始使用纯代码生成NSLayoutConstraint时编写的" lineBreakMode="characterWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EV8-Ko-Ke9">
+                                                    <rect key="frame" x="8" y="56" width="304" height="48"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="大牛哥" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ynJ-vG-kMg">
                                                     <rect key="frame" x="8" y="196" width="80" height="21"/>
                                                     <constraints>
@@ -134,19 +140,13 @@
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="home_pic" translatesAutoresizingMaskIntoConstraints="NO" id="jrO-SS-ok6">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="250" translatesAutoresizingMaskIntoConstraints="NO" id="jrO-SS-ok6">
                                                     <rect key="frame" x="8" y="108" width="160" height="80"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="height" constant="80" id="Xei-dX-JBx"/>
+                                                        <constraint firstAttribute="height" priority="750" constant="80" id="Xei-dX-JBx"/>
                                                         <constraint firstAttribute="width" constant="160" id="dko-YN-2vK"/>
                                                     </constraints>
                                                 </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="是笔者在项目开始使用纯代码生成NSLayoutConstraint时编写的" lineBreakMode="characterWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EV8-Ko-Ke9">
-                                                    <rect key="frame" x="8" y="56" width="304" height="48"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="ynJ-vG-kMg" firstAttribute="leading" secondItem="20d-XG-K4k" secondAttribute="leadingMargin" id="8cA-V3-W3s"/>
@@ -172,6 +172,7 @@
                                         <connections>
                                             <outlet property="contentImageView" destination="jrO-SS-ok6" id="0fi-ME-1C0"/>
                                             <outlet property="contentLabel" destination="EV8-Ko-Ke9" id="k8p-pF-lWQ"/>
+                                            <outlet property="imgHeightCons" destination="Xei-dX-JBx" id="mGI-H6-avh"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -620,7 +621,6 @@
         <image name="home_account" width="40" height="40"/>
         <image name="home_cell_ad" width="22" height="22"/>
         <image name="home_cell_vline.png" width="1" height="1"/>
-        <image name="home_pic" width="540" height="300"/>
         <image name="home_share_wifi" width="40" height="40"/>
         <image name="home_test_speed" width="40" height="40"/>
         <image name="home_wifi_connected" width="40" height="40"/>
