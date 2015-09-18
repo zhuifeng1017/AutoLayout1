@@ -141,10 +141,9 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="250" translatesAutoresizingMaskIntoConstraints="NO" id="jrO-SS-ok6">
-                                                    <rect key="frame" x="8" y="108" width="160" height="80"/>
+                                                    <rect key="frame" x="8" y="108" width="304" height="80"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" priority="750" constant="80" id="Xei-dX-JBx"/>
-                                                        <constraint firstAttribute="width" constant="160" id="dko-YN-2vK"/>
                                                     </constraints>
                                                 </imageView>
                                             </subviews>
@@ -163,6 +162,7 @@
                                                 <constraint firstItem="iOS-jJ-05j" firstAttribute="leading" secondItem="20d-XG-K4k" secondAttribute="leadingMargin" id="Yg3-Tr-zmC"/>
                                                 <constraint firstItem="ynJ-vG-kMg" firstAttribute="top" secondItem="jrO-SS-ok6" secondAttribute="bottom" constant="8" id="ZP6-rJ-TnE"/>
                                                 <constraint firstItem="ynJ-vG-kMg" firstAttribute="bottom" secondItem="20d-XG-K4k" secondAttribute="bottomMargin" id="ba5-24-4py"/>
+                                                <constraint firstItem="jrO-SS-ok6" firstAttribute="trailing" secondItem="20d-XG-K4k" secondAttribute="trailingMargin" id="btN-qn-LdV"/>
                                                 <constraint firstItem="jrO-SS-ok6" firstAttribute="top" secondItem="EV8-Ko-Ke9" secondAttribute="bottom" constant="4" id="cOH-pJ-XO5"/>
                                                 <constraint firstItem="EV8-Ko-Ke9" firstAttribute="trailing" secondItem="20d-XG-K4k" secondAttribute="trailingMargin" id="nxU-ce-2Qv"/>
                                                 <constraint firstItem="jrO-SS-ok6" firstAttribute="leading" secondItem="20d-XG-K4k" secondAttribute="leadingMargin" id="qEh-vd-Dp0"/>
@@ -196,7 +196,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="i9o-8A-XUg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1838" y="1075"/>
+            <point key="canvasLocation" x="-2034" y="1073"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="tlo-7w-VkD">

@@ -35,7 +35,7 @@
     if (_contentImagePath.length == 0) {
         _imgHeightCons.constant = 0;
     } else {
-        _imgHeightCons.constant = 80;
+        _imgHeightCons.constant = (CGRectGetWidth(self.frame) - (_contentImageView.left * 2)) * 0.5;
     }
     [super updateConstraints];
 }
