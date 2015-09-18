@@ -13,7 +13,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *contentLabel;
 @property (weak, nonatomic) IBOutlet UIImageView *contentImageView;
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *imgHeightCons;
-
+@property (copy, nonatomic) NSString *contentImagePath;
 @end
 
 @interface AutolayoutTableViewController : UIViewController <UITableViewDataSource, UITableViewDelegate>

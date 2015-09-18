@@ -31,6 +31,15 @@
     self.contentLabel.preferredMaxLayoutWidth = CGRectGetWidth(self.contentLabel.frame);
 }
 
+- (void)updateConstraints {
+    if (_contentImagePath.length == 0) {
+        _imgHeightCons.constant = 0;
+    } else {
+        _imgHeightCons.constant = 80;
+    }
+    [super updateConstraints];
+}
+
 @end
 
 /**
@@ -78,14 +87,8 @@
     AutolayoutCell *cell = (AutolayoutCell *)[tableView dequeueReusableCellWithIdentifier:@"cell1" forIndexPath:indexPath];
     cell.contentLabel.text = _contentTexts[indexPath.row];
     NSString *imagePath = _imagePaths[indexPath.row];
+    cell.contentImagePath = imagePath;
     cell.contentImageView.image = [UIImage imageNamed:imagePath];
-#if 1
-    if ([imagePath length] == 0) {
-        cell.imgHeightCons.constant = 0;
-    } else {
-        cell.imgHeightCons.constant = 80;
-    }
-#endif
     [cell setNeedsUpdateConstraints];
     [cell updateConstraintsIfNeeded];
     return cell;
@@ -98,11 +101,7 @@
 
     _calcCell.contentLabel.text = _contentTexts[indexPath.row];
     NSString *imagePath = _imagePaths[indexPath.row];
-    if ([imagePath length] == 0) {
-        _calcCell.imgHeightCons.constant = 0;
-    } else {
-        _calcCell.imgHeightCons.constant = 80;
-    }
+    _calcCell.contentImagePath = imagePath;
     [_calcCell setNeedsUpdateConstraints];
     [_calcCell updateConstraintsIfNeeded];
 
