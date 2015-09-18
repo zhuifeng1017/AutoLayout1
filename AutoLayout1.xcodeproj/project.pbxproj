@@ -10,6 +10,8 @@
 		6D38FE281BA6F7340081EB3F /* WelComeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D38FE271BA6F7340081EB3F /* WelComeViewController.m */; };
 		6D4551A21BA7D5DC0099FED6 /* MyTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D4551A11BA7D5DC0099FED6 /* MyTableViewController.m */; };
 		6D9F22B01BA7D0360064E6F1 /* LableMultiLineViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D9F22AF1BA7D0360064E6F1 /* LableMultiLineViewController.m */; };
+		6DC2E0511BAC3C3500936D6C /* AutolayoutTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DC2E0501BAC3C3500936D6C /* AutolayoutTableViewController.m */; };
+		6DC2E0571BAC4CFE00936D6C /* UIView+Frame.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DC2E0561BAC4CFE00936D6C /* UIView+Frame.m */; };
 		6DF6ED401BA66D59007258E9 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DF6ED3F1BA66D59007258E9 /* main.m */; };
 		6DF6ED431BA66D59007258E9 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DF6ED421BA66D59007258E9 /* AppDelegate.m */; };
 		6DF6ED461BA66D59007258E9 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DF6ED451BA66D59007258E9 /* ViewController.m */; };
@@ -38,6 +40,10 @@
 		6D4551A11BA7D5DC0099FED6 /* MyTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyTableViewController.m; sourceTree = "<group>"; };
 		6D9F22AE1BA7D0360064E6F1 /* LableMultiLineViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LableMultiLineViewController.h; sourceTree = "<group>"; };
 		6D9F22AF1BA7D0360064E6F1 /* LableMultiLineViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LableMultiLineViewController.m; sourceTree = "<group>"; };
+		6DC2E04F1BAC3C3500936D6C /* AutolayoutTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AutolayoutTableViewController.h; sourceTree = "<group>"; };
+		6DC2E0501BAC3C3500936D6C /* AutolayoutTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AutolayoutTableViewController.m; sourceTree = "<group>"; };
+		6DC2E0551BAC4CFE00936D6C /* UIView+Frame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Frame.h"; sourceTree = "<group>"; };
+		6DC2E0561BAC4CFE00936D6C /* UIView+Frame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Frame.m"; sourceTree = "<group>"; };
 		6DF6ED3A1BA66D59007258E9 /* AutoLayout1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AutoLayout1.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6DF6ED3E1BA66D59007258E9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6DF6ED3F1BA66D59007258E9 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -100,8 +106,12 @@
 		6DF6ED3C1BA66D59007258E9 /* AutoLayout1 */ = {
 			isa = PBXGroup;
 			children = (
+				6DC2E0551BAC4CFE00936D6C /* UIView+Frame.h */,
+				6DC2E0561BAC4CFE00936D6C /* UIView+Frame.m */,
 				6DF6ED411BA66D59007258E9 /* AppDelegate.h */,
 				6DF6ED421BA66D59007258E9 /* AppDelegate.m */,
+				6DC2E04F1BAC3C3500936D6C /* AutolayoutTableViewController.h */,
+				6DC2E0501BAC3C3500936D6C /* AutolayoutTableViewController.m */,
 				6DF6ED441BA66D59007258E9 /* ViewController.h */,
 				6DF6ED451BA66D59007258E9 /* ViewController.m */,
 				6DF6ED631BA68F82007258E9 /* CodeLayoutViewController.h */,
@@ -298,8 +308,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6DC2E0511BAC3C3500936D6C /* AutolayoutTableViewController.m in Sources */,
 				6DF6ED461BA66D59007258E9 /* ViewController.m in Sources */,
 				6DF6ED651BA68F82007258E9 /* CodeLayoutViewController.m in Sources */,
+				6DC2E0571BAC4CFE00936D6C /* UIView+Frame.m in Sources */,
 				6DF6ED431BA66D59007258E9 /* AppDelegate.m in Sources */,
 				6DF6ED401BA66D59007258E9 /* main.m in Sources */,
 				6D4551A21BA7D5DC0099FED6 /* MyTableViewController.m in Sources */,
