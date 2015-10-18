@@ -9,6 +9,10 @@
 /* Begin PBXBuildFile section */
 		6D38FE281BA6F7340081EB3F /* WelComeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D38FE271BA6F7340081EB3F /* WelComeViewController.m */; };
 		6D4551A21BA7D5DC0099FED6 /* MyTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D4551A11BA7D5DC0099FED6 /* MyTableViewController.m */; };
+		6D6060B51BD330FE002FDB03 /* UITableView+FDIndexPathHeightCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D6060AE1BD330FE002FDB03 /* UITableView+FDIndexPathHeightCache.m */; settings = {ASSET_TAGS = (); }; };
+		6D6060B61BD330FE002FDB03 /* UITableView+FDKeyedHeightCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D6060B01BD330FE002FDB03 /* UITableView+FDKeyedHeightCache.m */; settings = {ASSET_TAGS = (); }; };
+		6D6060B71BD330FE002FDB03 /* UITableView+FDTemplateLayoutCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D6060B21BD330FE002FDB03 /* UITableView+FDTemplateLayoutCell.m */; settings = {ASSET_TAGS = (); }; };
+		6D6060B81BD330FE002FDB03 /* UITableView+FDTemplateLayoutCellDebug.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D6060B41BD330FE002FDB03 /* UITableView+FDTemplateLayoutCellDebug.m */; settings = {ASSET_TAGS = (); }; };
 		6D9F22B01BA7D0360064E6F1 /* LableMultiLineViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D9F22AF1BA7D0360064E6F1 /* LableMultiLineViewController.m */; };
 		6DC2E0511BAC3C3500936D6C /* AutolayoutTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DC2E0501BAC3C3500936D6C /* AutolayoutTableViewController.m */; };
 		6DC2E0571BAC4CFE00936D6C /* UIView+Frame.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DC2E0561BAC4CFE00936D6C /* UIView+Frame.m */; };
@@ -38,6 +42,14 @@
 		6D38FE271BA6F7340081EB3F /* WelComeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WelComeViewController.m; sourceTree = "<group>"; };
 		6D4551A01BA7D5DC0099FED6 /* MyTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyTableViewController.h; sourceTree = "<group>"; };
 		6D4551A11BA7D5DC0099FED6 /* MyTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyTableViewController.m; sourceTree = "<group>"; };
+		6D6060AD1BD330FE002FDB03 /* UITableView+FDIndexPathHeightCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITableView+FDIndexPathHeightCache.h"; sourceTree = "<group>"; };
+		6D6060AE1BD330FE002FDB03 /* UITableView+FDIndexPathHeightCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITableView+FDIndexPathHeightCache.m"; sourceTree = "<group>"; };
+		6D6060AF1BD330FE002FDB03 /* UITableView+FDKeyedHeightCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITableView+FDKeyedHeightCache.h"; sourceTree = "<group>"; };
+		6D6060B01BD330FE002FDB03 /* UITableView+FDKeyedHeightCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITableView+FDKeyedHeightCache.m"; sourceTree = "<group>"; };
+		6D6060B11BD330FE002FDB03 /* UITableView+FDTemplateLayoutCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITableView+FDTemplateLayoutCell.h"; sourceTree = "<group>"; };
+		6D6060B21BD330FE002FDB03 /* UITableView+FDTemplateLayoutCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITableView+FDTemplateLayoutCell.m"; sourceTree = "<group>"; };
+		6D6060B31BD330FE002FDB03 /* UITableView+FDTemplateLayoutCellDebug.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITableView+FDTemplateLayoutCellDebug.h"; sourceTree = "<group>"; };
+		6D6060B41BD330FE002FDB03 /* UITableView+FDTemplateLayoutCellDebug.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITableView+FDTemplateLayoutCellDebug.m"; sourceTree = "<group>"; };
 		6D9F22AE1BA7D0360064E6F1 /* LableMultiLineViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LableMultiLineViewController.h; sourceTree = "<group>"; };
 		6D9F22AF1BA7D0360064E6F1 /* LableMultiLineViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LableMultiLineViewController.m; sourceTree = "<group>"; };
 		6DC2E04F1BAC3C3500936D6C /* AutolayoutTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AutolayoutTableViewController.h; sourceTree = "<group>"; };
@@ -83,6 +95,21 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6D6060AC1BD330FE002FDB03 /* UITableView+FDTemplateLayoutCell */ = {
+			isa = PBXGroup;
+			children = (
+				6D6060AD1BD330FE002FDB03 /* UITableView+FDIndexPathHeightCache.h */,
+				6D6060AE1BD330FE002FDB03 /* UITableView+FDIndexPathHeightCache.m */,
+				6D6060AF1BD330FE002FDB03 /* UITableView+FDKeyedHeightCache.h */,
+				6D6060B01BD330FE002FDB03 /* UITableView+FDKeyedHeightCache.m */,
+				6D6060B11BD330FE002FDB03 /* UITableView+FDTemplateLayoutCell.h */,
+				6D6060B21BD330FE002FDB03 /* UITableView+FDTemplateLayoutCell.m */,
+				6D6060B31BD330FE002FDB03 /* UITableView+FDTemplateLayoutCellDebug.h */,
+				6D6060B41BD330FE002FDB03 /* UITableView+FDTemplateLayoutCellDebug.m */,
+			);
+			path = "UITableView+FDTemplateLayoutCell";
+			sourceTree = "<group>";
+		};
 		6DF6ED311BA66D59007258E9 = {
 			isa = PBXGroup;
 			children = (
@@ -106,6 +133,7 @@
 		6DF6ED3C1BA66D59007258E9 /* AutoLayout1 */ = {
 			isa = PBXGroup;
 			children = (
+				6D6060AC1BD330FE002FDB03 /* UITableView+FDTemplateLayoutCell */,
 				6DC2E0551BAC4CFE00936D6C /* UIView+Frame.h */,
 				6DC2E0561BAC4CFE00936D6C /* UIView+Frame.m */,
 				6DF6ED411BA66D59007258E9 /* AppDelegate.h */,
@@ -185,6 +213,7 @@
 				6DF6ED371BA66D59007258E9 /* Frameworks */,
 				6DF6ED381BA66D59007258E9 /* Resources */,
 				A64ED1054AE24BE8D0E41B85 /* Copy Pods Resources */,
+				5671140B81616047FE024181 /* Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -286,6 +315,21 @@
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
+		5671140B81616047FE024181 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		A64ED1054AE24BE8D0E41B85 /* Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -310,11 +354,15 @@
 			files = (
 				6DC2E0511BAC3C3500936D6C /* AutolayoutTableViewController.m in Sources */,
 				6DF6ED461BA66D59007258E9 /* ViewController.m in Sources */,
+				6D6060B61BD330FE002FDB03 /* UITableView+FDKeyedHeightCache.m in Sources */,
 				6DF6ED651BA68F82007258E9 /* CodeLayoutViewController.m in Sources */,
+				6D6060B51BD330FE002FDB03 /* UITableView+FDIndexPathHeightCache.m in Sources */,
 				6DC2E0571BAC4CFE00936D6C /* UIView+Frame.m in Sources */,
 				6DF6ED431BA66D59007258E9 /* AppDelegate.m in Sources */,
+				6D6060B81BD330FE002FDB03 /* UITableView+FDTemplateLayoutCellDebug.m in Sources */,
 				6DF6ED401BA66D59007258E9 /* main.m in Sources */,
 				6D4551A21BA7D5DC0099FED6 /* MyTableViewController.m in Sources */,
+				6D6060B71BD330FE002FDB03 /* UITableView+FDTemplateLayoutCell.m in Sources */,
 				6D38FE281BA6F7340081EB3F /* WelComeViewController.m in Sources */,
 				6D9F22B01BA7D0360064E6F1 /* LableMultiLineViewController.m in Sources */,
 			);

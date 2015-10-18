@@ -8,6 +8,7 @@
 
 #import "AutolayoutTableViewController.h"
 #import "UIView+Frame.h"
+#import "UITableView+FDTemplateLayoutCell.h"
 
 CGSize CGSizeAspectFit(CGSize aspectRatio, CGSize boundingSize)
 {
@@ -41,14 +42,39 @@ CGSize CGSizeAspectFill(CGSize aspectRatio, CGSize minimumSize)
     self.contentLabel.numberOfLines = 5;
 }
 
+
+//------------------------分割线----------------------------------
+#if FDLayout
+- (void)setEntity:(NSString *) imagePath contentText:(NSString*) contentText
+{
+    self.contentLabel.text = contentText;
+    if ([imagePath hasPrefix:@"http"]) {
+        
+    }else{
+        UIImage *image = [UIImage imageNamed:imagePath];
+        if (image) {
+            self.contentImageView.image = image;
+            CGSize size = CGSizeAspectFit(image.size, CGSizeMake(CGRectGetWidth(self.contentView.frame), 150));
+            _imgHeightCons.constant = size.height;
+            _imgWidthCons.constant = size.width;
+            
+        }else{
+            _imgHeightCons.constant = 0;
+        }
+    }
+}
+
+//------------------------分割线----------------------------------
+#else
+
 - (void)layoutSubviews {
     [super layoutSubviews];
-
+    
     // Make sure the contentView does a layout pass here so that its subviews have their frames set, which we
     // need to use to set the preferredMaxLayoutWidth below.
     [self.contentView setNeedsLayout];
     [self.contentView layoutIfNeeded];
-
+    
     // Set the preferredMaxLayoutWidth of the mutli-line bodyLabel based on the evaluated width of the label's frame,
     // as this will allow the text to wrap correctly, and as a result allow the label to take on the correct height.
     self.contentLabel.preferredMaxLayoutWidth = CGRectGetWidth(self.contentLabel.frame);
@@ -66,6 +92,8 @@ CGSize CGSizeAspectFill(CGSize aspectRatio, CGSize minimumSize)
     [super updateConstraints];
 }
 
+#endif
+
 @end
 
 /**
@@ -82,6 +110,10 @@ CGSize CGSizeAspectFill(CGSize aspectRatio, CGSize minimumSize)
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    
+#if FDLayout
+//    self.tableView.fd_debugLogEnabled = YES;
+#endif
     int count = 100;
     _contentTexts = [NSMutableArray arrayWithCapacity:count];
     _imagePaths = [NSMutableArray arrayWithCapacity:count];
@@ -100,6 +132,9 @@ CGSize CGSizeAspectFill(CGSize aspectRatio, CGSize minimumSize)
 }
 
 #pragma mark - Table view data source
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+}
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
     return 1;
@@ -108,6 +143,37 @@ CGSize CGSizeAspectFill(CGSize aspectRatio, CGSize minimumSize)
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     return _contentTexts.count;
 }
+
+//------------------------分割线----------------------------------
+#if FDLayout
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    AutolayoutCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell1" forIndexPath:indexPath];
+    [self configureCell:cell atIndexPath:indexPath];
+    return cell;
+}
+
+- (void)configureCell:(AutolayoutCell *)cell atIndexPath:(NSIndexPath *)indexPath {
+    cell.fd_enforceFrameLayout = NO; // Enable to use "-sizeThatFits:"
+//    if (indexPath.row % 2 == 0) {
+//        cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+//    } else {
+//        cell.accessoryType = UITableViewCellAccessoryCheckmark;
+//    }
+    NSString *imagePath = _imagePaths[indexPath.row];
+    [cell setEntity:imagePath contentText:_contentTexts[indexPath.row]];
+}
+
+#pragma mark - UITableViewDelegate
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    return [tableView fd_heightForCellWithIdentifier:@"cell1" cacheByIndexPath:indexPath configuration:^(AutolayoutCell *cell) {
+        [self configureCell:cell atIndexPath:indexPath];
+    }];
+}
+
+#else
+//------------------------分割线----------------------------------
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     AutolayoutCell *cell = (AutolayoutCell *)[tableView dequeueReusableCellWithIdentifier:@"cell1" forIndexPath:indexPath];
@@ -143,8 +209,7 @@ CGSize CGSizeAspectFill(CGSize aspectRatio, CGSize minimumSize)
     return height;
 }
 
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    [tableView deselectRowAtIndexPath:indexPath animated:YES];
-}
+#endif
+
 
 @end
