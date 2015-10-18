@@ -9,6 +9,7 @@
 #import "AutolayoutTableViewController.h"
 #import "UIView+Frame.h"
 #import "UITableView+FDTemplateLayoutCell.h"
+#import "UIImageView+WebCache.h"
 
 CGSize CGSizeAspectFit(CGSize aspectRatio, CGSize boundingSize)
 {
@@ -49,6 +50,8 @@ CGSize CGSizeAspectFill(CGSize aspectRatio, CGSize minimumSize)
 {
     self.contentLabel.text = contentText;
     if ([imagePath hasPrefix:@"http"]) {
+        [self.contentImageView sd_setImageWithURL:[NSURL URLWithString:imagePath]];
+        _imgHeightCons.constant = _imgWidthCons.constant = 80;
         
     }else{
         UIImage *image = [UIImage imageNamed:imagePath];
@@ -114,6 +117,7 @@ CGSize CGSizeAspectFill(CGSize aspectRatio, CGSize minimumSize)
 #if FDLayout
 //    self.tableView.fd_debugLogEnabled = YES;
 #endif
+    
     int count = 100;
     _contentTexts = [NSMutableArray arrayWithCapacity:count];
     _imagePaths = [NSMutableArray arrayWithCapacity:count];
@@ -126,7 +130,7 @@ CGSize CGSizeAspectFill(CGSize aspectRatio, CGSize minimumSize)
             [_imagePaths addObject:@"home_pic"];
         } else {
             [_contentTexts addObject:@"WWDC总结：开发者需要知道的iOS 9 SDK新特性|如何搞定Autolayout，远离自动布局带给你的烦恼- 简书"];
-            [_imagePaths addObject:@"imager_02"];
+            [_imagePaths addObject:@"http://iid2.oss-cn-shanghai.aliyuncs.com/8%2F000100_200x.png"];
         }
     }
 }
