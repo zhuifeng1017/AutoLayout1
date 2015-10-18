@@ -130,7 +130,8 @@ CGSize CGSizeAspectFill(CGSize aspectRatio, CGSize minimumSize)
             [_imagePaths addObject:@"home_pic"];
         } else {
             [_contentTexts addObject:@"WWDC总结：开发者需要知道的iOS 9 SDK新特性|如何搞定Autolayout，远离自动布局带给你的烦恼- 简书"];
-            [_imagePaths addObject:@"http://iid.oss-cn-hangzhou.aliyuncs.com/iOS%2Fip6s_%E5%85%BC%E5%AE%B9%E6%A8%A1%E5%BC%8F.png"];
+//            [_imagePaths addObject:@"http://iid.oss-cn-hangzhou.aliyuncs.com/iOS%2Fip6s_%E5%85%BC%E5%AE%B9%E6%A8%A1%E5%BC%8F.png"];
+            [_imagePaths addObject:@"imager_02"];
         }
     }
 }
