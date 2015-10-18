@@ -13,6 +13,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *contentLabel;
 @property (weak, nonatomic) IBOutlet UIImageView *contentImageView;
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *imgHeightCons;
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *imgWidthCons;
 @property (copy, nonatomic) NSString *contentImagePath;
 @end
 

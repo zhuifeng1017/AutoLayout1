@@ -9,6 +9,29 @@
 #import "AutolayoutTableViewController.h"
 #import "UIView+Frame.h"
 
+CGSize CGSizeAspectFit(CGSize aspectRatio, CGSize boundingSize)
+{
+    float mW = boundingSize.width / aspectRatio.width;
+    float mH = boundingSize.height / aspectRatio.height;
+    if( mH < mW )
+        boundingSize.width = boundingSize.height / aspectRatio.height * aspectRatio.width;
+    else if( mW < mH )
+        boundingSize.height = boundingSize.width / aspectRatio.width * aspectRatio.height;
+    return boundingSize;
+}
+
+CGSize CGSizeAspectFill(CGSize aspectRatio, CGSize minimumSize)
+{
+    float mW = minimumSize.width / aspectRatio.width;
+    float mH = minimumSize.height / aspectRatio.height;
+    if( mH > mW )
+        minimumSize.width = minimumSize.height / aspectRatio.height * aspectRatio.width;
+    else if( mW > mH )
+        minimumSize.height = minimumSize.width / aspectRatio.width * aspectRatio.height;
+    return minimumSize;
+}
+
+
 /**
  *  AutolayoutCell
  */
@@ -32,10 +55,13 @@
 }
 
 - (void)updateConstraints {
-    if (_contentImagePath.length == 0) {
+    UIImage *image = [UIImage imageNamed:_contentImagePath];
+    if (image) {
+        CGSize size = CGSizeAspectFit(image.size, CGSizeMake(CGRectGetWidth(self.contentView.frame), 150));
+        _imgHeightCons.constant = size.height;
+        _imgWidthCons.constant = size.width;
+    }else{
         _imgHeightCons.constant = 0;
-    } else {
-        _imgHeightCons.constant = (CGRectGetWidth(self.frame) - (_contentImageView.left * 2)) * 0.5;
     }
     [super updateConstraints];
 }
@@ -65,10 +91,10 @@
             [_imagePaths addObject:@""];
         } else if (i % 2 == 0) {
             [_contentTexts addObject:@"The ultimate API for iOS & OS X Auto Layout"];
-            [_imagePaths addObject:@""];
+            [_imagePaths addObject:@"home_pic"];
         } else {
             [_contentTexts addObject:@"WWDC总结：开发者需要知道的iOS 9 SDK新特性|如何搞定Autolayout，远离自动布局带给你的烦恼- 简书"];
-            [_imagePaths addObject:@"home_pic"];
+            [_imagePaths addObject:@"imager_02"];
         }
     }
 }

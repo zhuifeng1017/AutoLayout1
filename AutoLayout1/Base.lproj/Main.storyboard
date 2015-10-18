@@ -80,13 +80,6 @@
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="224.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="two-dimension" translatesAutoresizingMaskIntoConstraints="NO" id="iOS-jJ-05j">
-                                                    <rect key="frame" x="8" y="8" width="40" height="40"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="height" constant="40" id="c0B-gr-c2u"/>
-                                                        <constraint firstAttribute="width" constant="40" id="gG0-oc-NAz"/>
-                                                    </constraints>
-                                                </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="高大上服装批发" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KwT-a8-Lh0">
                                                     <rect key="frame" x="56" y="17" width="98" height="21"/>
                                                     <constraints>
@@ -143,9 +136,17 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="250" placeholderIntrinsicWidth="304" placeholderIntrinsicHeight="80" translatesAutoresizingMaskIntoConstraints="NO" id="jrO-SS-ok6">
-                                                    <rect key="frame" x="8" y="108" width="288" height="80"/>
+                                                    <rect key="frame" x="8" y="108" width="80" height="80"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" priority="750" constant="80" id="Xei-dX-JBx"/>
+                                                        <constraint firstAttribute="width" constant="80" id="lYS-Zi-wdL"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="two-dimension" translatesAutoresizingMaskIntoConstraints="NO" id="iOS-jJ-05j">
+                                                    <rect key="frame" x="8" y="8" width="40" height="40"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="40" id="c0B-gr-c2u"/>
+                                                        <constraint firstAttribute="width" constant="40" id="gG0-oc-NAz"/>
                                                     </constraints>
                                                 </imageView>
                                             </subviews>
@@ -153,19 +154,18 @@
                                                 <constraint firstItem="ynJ-vG-kMg" firstAttribute="leading" secondItem="20d-XG-K4k" secondAttribute="leadingMargin" id="8cA-V3-W3s"/>
                                                 <constraint firstItem="EV8-Ko-Ke9" firstAttribute="leading" secondItem="20d-XG-K4k" secondAttribute="leadingMargin" id="8qu-52-5LK"/>
                                                 <constraint firstItem="iOS-jJ-05j" firstAttribute="top" secondItem="20d-XG-K4k" secondAttribute="topMargin" id="95H-H0-1S5"/>
-                                                <constraint firstAttribute="centerX" secondItem="FIr-ui-CL9" secondAttribute="centerX" id="AeR-i1-ZGf"/>
                                                 <constraint firstItem="xIA-3D-uuP" firstAttribute="bottom" secondItem="FIr-ui-CL9" secondAttribute="bottom" id="C7z-GJ-ke1"/>
                                                 <constraint firstItem="xIA-3D-uuP" firstAttribute="trailing" secondItem="20d-XG-K4k" secondAttribute="trailingMargin" id="D5j-Ji-gRf"/>
                                                 <constraint firstItem="3q9-VT-7rm" firstAttribute="trailing" secondItem="20d-XG-K4k" secondAttribute="trailingMargin" id="DrE-77-owC"/>
                                                 <constraint firstItem="KwT-a8-Lh0" firstAttribute="leading" secondItem="iOS-jJ-05j" secondAttribute="trailing" constant="8" id="Dyu-DY-hwX"/>
                                                 <constraint firstItem="ynJ-vG-kMg" firstAttribute="bottom" secondItem="FIr-ui-CL9" secondAttribute="bottom" id="F7b-bR-B65"/>
-                                                <constraint firstAttribute="trailingMargin" relation="greaterThanOrEqual" secondItem="jrO-SS-ok6" secondAttribute="trailing" constant="16" id="Lbp-Ob-p5F"/>
                                                 <constraint firstItem="iOS-jJ-05j" firstAttribute="centerY" secondItem="KwT-a8-Lh0" secondAttribute="centerY" constant="0.5" id="OPc-uk-rdZ"/>
                                                 <constraint firstItem="3q9-VT-7rm" firstAttribute="centerY" secondItem="iOS-jJ-05j" secondAttribute="centerY" constant="-0.5" id="Xnz-oj-KIb"/>
                                                 <constraint firstItem="iOS-jJ-05j" firstAttribute="leading" secondItem="20d-XG-K4k" secondAttribute="leadingMargin" id="Yg3-Tr-zmC"/>
                                                 <constraint firstItem="ynJ-vG-kMg" firstAttribute="top" secondItem="jrO-SS-ok6" secondAttribute="bottom" constant="8" id="ZP6-rJ-TnE"/>
                                                 <constraint firstItem="ynJ-vG-kMg" firstAttribute="bottom" secondItem="20d-XG-K4k" secondAttribute="bottomMargin" id="ba5-24-4py"/>
                                                 <constraint firstItem="jrO-SS-ok6" firstAttribute="top" secondItem="EV8-Ko-Ke9" secondAttribute="bottom" constant="4" id="cOH-pJ-XO5"/>
+                                                <constraint firstItem="FIr-ui-CL9" firstAttribute="centerX" secondItem="20d-XG-K4k" secondAttribute="centerX" id="kRt-xG-7iq"/>
                                                 <constraint firstItem="EV8-Ko-Ke9" firstAttribute="trailing" secondItem="20d-XG-K4k" secondAttribute="trailingMargin" id="nxU-ce-2Qv"/>
                                                 <constraint firstItem="jrO-SS-ok6" firstAttribute="leading" secondItem="20d-XG-K4k" secondAttribute="leadingMargin" id="qEh-vd-Dp0"/>
                                                 <constraint firstItem="EV8-Ko-Ke9" firstAttribute="top" secondItem="iOS-jJ-05j" secondAttribute="bottom" constant="8" id="x9j-hH-alX"/>
@@ -175,6 +175,7 @@
                                             <outlet property="contentImageView" destination="jrO-SS-ok6" id="0fi-ME-1C0"/>
                                             <outlet property="contentLabel" destination="EV8-Ko-Ke9" id="k8p-pF-lWQ"/>
                                             <outlet property="imgHeightCons" destination="Xei-dX-JBx" id="mGI-H6-avh"/>
+                                            <outlet property="imgWidthCons" destination="lYS-Zi-wdL" id="x7J-E9-EVd"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -198,7 +199,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="i9o-8A-XUg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2875" y="292"/>
+            <point key="canvasLocation" x="-3025" y="167"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="tlo-7w-VkD">
