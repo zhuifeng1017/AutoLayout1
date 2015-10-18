@@ -52,9 +52,8 @@ CGSize CGSizeAspectFill(CGSize aspectRatio, CGSize minimumSize)
     if ([imagePath hasPrefix:@"http"]) {
         [self.contentImageView sd_setImageWithURL:[NSURL URLWithString:imagePath]];
         _imgHeightCons.constant = _imgWidthCons.constant = 80;
-        
     }else{
-        UIImage *image = [UIImage imageNamed:imagePath];
+        UIImage *image = (imagePath.length?[UIImage imageNamed:imagePath]:nil);
         if (image) {
             self.contentImageView.image = image;
             CGSize size = CGSizeAspectFit(image.size, CGSizeMake(CGRectGetWidth(self.contentView.frame), 150));
